@@ -10,6 +10,7 @@ const merge = require('merge-stream');
 const mocha = require('gulp-mocha');
 const rename = require('gulp-rename');
 //const runSequence = require('run-sequence');
+const serve = require('gulp-serve');
 const source = require('vinyl-source-stream');
 const sourcemaps = require('gulp-sourcemaps');
 const streamify = require('gulp-streamify');
@@ -27,7 +28,7 @@ gulp.task('lint', function () {
         .pipe(eslint.failAfterError());
 });
 
-gulp.task('build', ['clean'], function () {
+gulp.task('build:game', ['clean'], function () {
     return bundle('src/index.js', true, 'umd', 'game')
         .pipe(source('index.js', './src'))
         .pipe(buffer())
@@ -49,6 +50,9 @@ gulp.task('test', ['build:test'], function () {
 		.pipe(mocha());
 });
 
-gulp.task('start', ['build'], function () {
-
+gulp.task('watch', function () {
+    gulp.watch('src/**/*.js', ['build:game']);
+    gulp.watch('tests/**/*.js', ['build:game']);
 });
+
+gulp.task('serve', serve('game'));

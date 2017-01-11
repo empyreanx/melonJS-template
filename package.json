@@ -21,6 +21,7 @@
     "gulp-mocha": "^3.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-rollup": "^2.3.0",
+    "gulp-serve": "^1.4.0",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-streamify": "^1.0.2",
     "merge-stream": "^1.0.0",
