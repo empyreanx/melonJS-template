@@ -20,7 +20,6 @@
         "curly": "warn",
         "eqeqeq": "off",
         "no-console": 0,
-        "no-unused-vars": ["warn"],
         "semi": ["error", "always"]
     }
 }

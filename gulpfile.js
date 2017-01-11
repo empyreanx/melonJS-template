@@ -38,21 +38,20 @@ gulp.task('build:game', ['clean'], function () {
         .pipe(gulp.dest('game/js'));
 });
 
-gulp.task('build:test', function () {
+gulp.task('build:tests', function () {
     return bundle('tests/index.js')
         .pipe(source('index.js', './tests'))
         .pipe(rename('unit.js'))
         .pipe(gulp.dest('tmp'));
 });
 
-gulp.task('test', ['build:test'], function () {
+gulp.task('test', ['build:tests'], function () {
 	return gulp.src('tmp/unit.js')
 		.pipe(mocha());
 });
 
 gulp.task('watch', function () {
     gulp.watch('src/**/*.js', ['build:game']);
-    gulp.watch('tests/**/*.js', ['build:game']);
 });
 
 gulp.task('serve', serve('game'));

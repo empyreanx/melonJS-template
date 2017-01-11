@@ -1,1 +1,2 @@
-import * as Test from './test';
+import test from './test';
+test();
