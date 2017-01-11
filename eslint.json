@@ -1,0 +1,25 @@
+{
+    "globals" : {
+        "console" : false,
+
+        "me" : false,
+
+        "describe" : false,
+        "it" : false
+    },
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "ecmaFeatures" : {
+            "impliedStrict": true
+        }
+    },
+    "extends" : "eslint:recommended",
+    "rules": {
+        "curly": "warn",
+        "eqeqeq": "off",
+        "no-console": 0,
+        "no-unused-vars": ["warn"],
+        "semi": ["error", "always"]
+    }
+}

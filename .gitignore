@@ -1,0 +1,18 @@
+# app
+app/app.js
+app/main.js
+app/unit.js
+app/node_modules
+tmp
+
+# build
+game/js/game.js
+game/js/game.js.map
+
+# dependencies
+node_modules
+
+# logs
+logs
+*.log
+npm-debug.log*
