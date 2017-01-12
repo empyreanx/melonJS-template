@@ -7,5 +7,3 @@ describe("something", function () {
     });
 
 });
-
-export default function () {};
